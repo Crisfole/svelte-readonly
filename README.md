@@ -1,10 +1,20 @@
 # Svelte Readonly
 
-Not all stores should be writable outside their module. This enables that. It has no dependencies. It also has no tests, but that's ok. It's not that interesting.
+Not all writable stores should be writable outside their module. This enables that. It has no dependencies. It also has no tests, but that's ok. It's not that interesting.
 
-## API
+## Installation
 
-This exports `readonly` as a named and default export. That's it. Readonly takes a writable store and returns a readable store. That's it.
+Install, as expected, with `npm install svelte-readonly`.
+
+## Usage
+
+```
+import readonly from 'svelte-readonly';
+// or
+import {readonly} from 'svelte-readonly';
+```
+
+Readonly takes a writable store and returns a readable store. That's it.
 
 ## Example
 
