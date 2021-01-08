@@ -1,6 +1,6 @@
 {
 	"name": "svelte-readonly",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Function to export only readonly store in svelte",
 	"main": "cjs/index.js",
 	"module": "es6/index.js",
