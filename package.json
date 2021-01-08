@@ -1,0 +1,46 @@
+{
+	"name": "svelte-readonly",
+	"version": "0.0.0",
+	"description": "Function to export only readonly store in svelte",
+	"main": "cjs/index.js",
+	"module": "es6/index.js",
+	"files": [
+		"cjs",
+		"es6",
+		"src"
+	],
+	"scripts": {
+		"clean:esm": "rm -rf esm",
+		"clean:cjs": "rm -rf cjs",
+		"clean": "run-p clean:*",
+		"build:esm": "tsc",
+		"build:cjs": "tsc --project tsconfig.cjs.json",
+		"build": "run-p build:*",
+		"dev:esm": "tsc -w",
+		"dev:cjs": "tsc -w --project tsconfig.cjs.json",
+		"dev": "run-p dev:*",
+		"prepare": "run-s clean build",
+		"preversion": "npm run test",
+		"postversion": "git push && git push --tags && npm publish --access=public"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/crisfole/svelte-readonly.git"
+	},
+	"keywords": [
+		"Svelte",
+		"Stores",
+		"Readonly"
+	],
+	"author": "Chris Pfohl",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/crisfole/svelte-readonly/issues"
+	},
+	"homepage": "https://github.com/crisfole/svelte-readonly#readme",
+	"devDependencies": {
+		"npm-run-all": "^4",
+		"svelte": "^3.31.2",
+		"typescript": "^3"
+	}
+}
